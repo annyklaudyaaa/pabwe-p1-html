@@ -3,243 +3,263 @@
   <head>
     <meta charset="utf-8" />
     <title>📖 Detail Blog - Dunia Coding</title>
+    <style>
+      body {
+        background-color: #f0f8ff;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        text-align: center;
+        background: linear-gradient(to right, #d8bfd8, #b0e0e6);
+        color: #2c3e50;
+        padding: 20px;
+        border-radius: 0 0 20px 20px;
+      }
+      header h1 {
+        margin: 0;
+      }
+      header marquee {
+        margin-top: 10px;
+        border-radius: 10px;
+        padding: 5px;
+        background: #e6e6fa;
+        color: #2c3e50;
+        font-weight: bold;
+      }
+      .artikel {
+        margin: 30px auto;
+        width: 90%;
+        background: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        padding: 20px;
+      }
+      .artikel img.cover {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      .artikel h2 {
+        margin-top: 15px;
+        color: #483d8b;
+      }
+      .artikel .author {
+        margin: 10px 0;
+        font-size: 14px;
+        color: #555;
+      }
+      .artikel hr {
+        margin: 20px 0;
+        border: none;
+        height: 2px;
+        background: #d8bfd8;
+      }
+      .artikel ul {
+        padding-left: 20px;
+      }
+      form input, form textarea {
+        margin-top: 5px;
+        padding: 8px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+      }
+      form input[type="submit"] {
+        background: #6a5acd;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      form input[type="submit"]:hover {
+        background: #483d8b;
+      }
+      .komentar {
+        list-style: none;
+        padding: 0;
+      }
+      .komentar li {
+        margin-bottom: 12px;
+      }
+      .komentar img {
+        border-radius: 50%;
+        vertical-align: middle;
+        margin-right: 8px;
+      }
+      .back-btn {
+        display: inline-block;
+        margin-top: 15px;
+        text-decoration: none;
+        color: white;
+        background: #6a5acd;
+        padding: 8px 15px;
+        border-radius: 8px;
+        transition: 0.3s;
+      }
+      .back-btn:hover {
+        background: #483d8b;
+      }
+      footer {
+        text-align: center;
+        margin-top: 40px;
+        padding: 20px;
+        background: #dcdcdc;
+        color: gray;
+        border-top: 3px solid #b0e0e6;
+      }
+    </style>
   </head>
-  <body bgcolor="#f0fff0">
+  <body>
     <!-- Header -->
-    <center>
+    <header>
       <h1>📖 Detail Blog - Dunia Coding</h1>
-      <marquee
-        behavior="alternate"
-        bgcolor="#c8e6c9"
-        scrollamount="5"
-        width="85%"
-      >
-        🌟 Belajar, Berkreasi, Berinovasi, Berkarya, dan Berbagi Inspirasi 🚀
+      <marquee behavior="alternate" scrollamount="5" width="85%">
+        🌟 Belajar • Berkreasi • Berinovasi • Berkarya • Berbagi Inspirasi 🚀
       </marquee>
-      <hr size="6" color="green" />
-    </center>
+    </header>
 
-    <!-- Artikel 1: HTML Dasar -->
-    <div id="html-dasar">
+    <!-- Artikel 1 -->
+    <div class="artikel">
+      <img
+        class="cover"
+        src="https://i.pinimg.com/1200x/41/2e/a7/412ea792b6963690a4a9dce67b73f216.jpg"
+        alt="Cover HTML"
+      />
+      <h2>🔥 Belajar HTML Dasar untuk Pemula</h2>
+      <div class="author">
+        <img
+          src="https://i.pinimg.com/736x/4c/15/e8/4c15e80abdad76a1aa0e30fa8a89383e.jpg"
+          width="50"
+        />
+        <b>✍ Author:</b> Anny Klaudya | 📅 4 September 2025
+      </div>
+      <hr />
+      <h3>🏷️ Label:</h3>
+      <ul>
+        <li>📘 <a href="#">HTML</a></li>
+        <li>🌐 <a href="#">Web Development</a></li>
+        <li>🛠️ <a href="#">Praktikum</a></li>
+      </ul>
+      <h3>📜 Deskripsi:</h3>
+      <p>
+        HTML (HyperText Markup Language) adalah fondasi utama dalam dunia web.
+        Dengan HTML kita dapat membangun kerangka sebuah website.
+      </p>
+      <p>
+        Elemen dasar: <code>&lt;h1&gt;</code> untuk judul,
+        <code>&lt;p&gt;</code> untuk paragraf, <code>&lt;img&gt;</code> untuk
+        gambar.
+      </p>
+      <p>
+        Setelah menguasai HTML, lanjutkan ke <b>CSS</b> untuk tampilan dan
+        <b>JavaScript</b> untuk interaktivitas ✨.
+      </p>
+
+      <!-- Komentar -->
+      <h3>💬 Tinggalkan Komentar:</h3>
+      <form>
+        <label>Nama:</label><br />
+        <input type="text" name="nama" style="width:50%;" /><br /><br />
+        <label>Komentar:</label><br />
+        <textarea rows="4" cols="50"></textarea><br /><br />
+        <input type="submit" value="Kirim" />
+      </form>
+
+      <h3>🗨️ Daftar Komentar:</h3>
+      <ul class="komentar">
+        <li>
+          <img
+            src="https://randomuser.me/api/portraits/men/32.jpg"
+            width="40"
+          /><b>Raka:</b> Penjelasannya mudah dipahami banget!
+        </li>
+        <li>
+          <img
+            src="https://randomuser.me/api/portraits/women/12.jpg"
+            width="40"
+          /><b>Sinta:</b> Cocok buat pemula yang baru belajar HTML 👍
+        </li>
+      </ul>
+
       <center>
-        <table border="1" width="90%" bgcolor="#ffffff" cellpadding="15">
-          <tr>
-            <td>
-              <center>
-                <img
-                  src="https://i.pinimg.com/1200x/41/2e/a7/412ea792b6963690a4a9dce67b73f216.jpg"
-                  alt="Cover HTML"
-                  width="100%"
-                  height="300"
-                />
-                <h2>🔥 Belajar HTML Dasar untuk Pemula</h2>
-                <img
-                  src="https://i.pinimg.com/736x/4c/15/e8/4c15e80abdad76a1aa0e30fa8a89383e.jpg"
-                  alt="Foto Author"
-                  width="70"
-                  style="border-radius:50%"
-                /><br />
-                <b>✍️ Author:</b> Anny Klaudya | 📅 4 September 2025
-              </center>
-
-              <hr size="3" color="lightgreen" />
-
-              <h3>🏷️ Label:</h3>
-              <ul>
-                <li>📘 <a href="#">HTML</a></li>
-                <li>🌐 <a href="#">Web Development</a></li>
-                <li>🛠️ <a href="#">Praktikum</a></li>
-              </ul>
-
-              <h3>📜 Deskripsi:</h3>
-              <p>
-                HTML (HyperText Markup Language) adalah fondasi utama dalam
-                dunia web. Dengan HTML kita dapat membangun kerangka sebuah
-                website.
-              </p>
-
-              <p>
-                Elemen dasar: <code>&lt;h1&gt;</code> untuk judul,
-                <code>&lt;p&gt;</code> untuk paragraf,
-                <code>&lt;img&gt;</code> untuk gambar, dan atribut seperti
-                <code>src</code> serta <code>href</code>.
-              </p>
-
-              <p>
-                Setelah menguasai HTML, lanjutkan ke <b>CSS</b> untuk tampilan
-                dan <b>JavaScript</b> untuk interaktivitas ✨.
-              </p>
-
-              <!-- Form Komentar -->
-              <h3>💬 Tinggalkan Komentar:</h3>
-              <form>
-                Nama: <input type="text" name="nama" /><br /><br />
-                Komentar:<br />
-                <textarea rows="4" cols="50"></textarea><br /><br />
-                <input type="submit" value="Kirim" />
-              </form>
-
-              <!-- Daftar Komentar -->
-              <h3>🗨️ Daftar Komentar:</h3>
-              <ul>
-                <li>
-                  <table>
-                    <tr>
-                      <td>
-                        <img
-                          src="https://randomuser.me/api/portraits/men/32.jpg"
-                          alt="Foto"
-                          width="50"
-                          style="border-radius:50%"
-                        />
-                      </td>
-                      <td valign="middle">
-                        <b>Raka:</b> Penjelasannya mudah dipahami banget!
-                      </td>
-                    </tr>
-                  </table>
-                </li>
-                <li>
-                  <table>
-                    <tr>
-                      <td>
-                        <img
-                          src="https://randomuser.me/api/portraits/women/12.jpg"
-                          alt="Foto"
-                          width="50"
-                          style="border-radius:50%"
-                        />
-                      </td>
-                      <td valign="middle">
-                        <b>Sinta:</b> Cocok buat pemula yang baru belajar HTML
-                        👍
-                      </td>
-                    </tr>
-                  </table>
-                </li>
-              </ul>
-
-              <center>
-                <a href="index.html">⬅ Kembali ke Blog</a>
-              </center>
-            </td>
-          </tr>
-        </table>
+        <a href="index.html" class="back-btn">⬅ Kembali ke Blog</a>
       </center>
     </div>
 
-    <br />
+    <!-- Artikel 2 -->
+    <div class="artikel">
+      <img
+        class="cover"
+        src="https://i.pinimg.com/1200x/6c/5b/0c/6c5b0c28c39753acf162afe17aef6555.jpg"
+        alt="Cover Tips"
+      />
+      <h2>⚡ Tips Produktif Belajar Pemrograman</h2>
+      <div class="author">
+        <img
+          src="https://i.pinimg.com/736x/4c/15/e8/4c15e80abdad76a1aa0e30fa8a89383e.jpg"
+          width="50"
+        />
+        <b>✍ Author:</b> Anny Klaudya | 📅 1 September 2025
+      </div>
+      <hr />
+      <h3>🏷️ Label:</h3>
+      <ul>
+        <li>💡 <a href="#">Motivasi</a></li>
+        <li>📖 <a href="#">Belajar</a></li>
+        <li>💻 <a href="#">Teknologi</a></li>
+      </ul>
+      <h3>📜 Deskripsi:</h3>
+      <p>
+        Belajar pemrograman membutuhkan konsistensi dan strategi. Jangan hanya
+        membaca teori, tapi juga sering praktik langsung.
+      </p>
+      <p>
+        Buat jadwal belajar, mulai dari proyek kecil, gunakan dokumentasi resmi,
+        dan jangan takut gagal.
+      </p>
+      <p>
+        Kunci produktif: <b>fokus, latihan rutin</b>, dan <b>komunitas</b> 🚀
+      </p>
 
-    <!-- Artikel 2: Tips Produktif -->
-    <div id="tips-produktif">
+      <!-- Komentar -->
+      <h3>💬 Tinggalkan Komentar:</h3>
+      <form>
+        <label>Nama:</label><br />
+        <input type="text" name="nama" style="width:50%;" /><br /><br />
+        <label>Komentar:</label><br />
+        <textarea rows="4" cols="50"></textarea><br /><br />
+        <input type="submit" value="Kirim" />
+      </form>
+
+      <h3>🗨️ Daftar Komentar:</h3>
+      <ul class="komentar">
+        <li>
+          <img
+            src="https://randomuser.me/api/portraits/men/44.jpg"
+            width="40"
+          /><b>Andi:</b> Tipsnya keren, bakal aku coba terapin!
+        </li>
+        <li>
+          <img
+            src="https://randomuser.me/api/portraits/women/45.jpg"
+            width="40"
+          /><b>Lina:</b> Setuju, konsistensi memang kunci sukses 👏
+        </li>
+      </ul>
+
       <center>
-        <table border="1" width="90%" bgcolor="#ffffff" cellpadding="15">
-          <tr>
-            <td>
-              <center>
-                <img
-                  src="https://i.pinimg.com/1200x/6c/5b/0c/6c5b0c28c39753acf162afe17aef6555.jpg"
-                  alt="Cover Tips"
-                  width="100%"
-                  height="300"
-                />
-                <h2>⚡ Tips Produktif Belajar Pemrograman</h2>
-                <img
-                  src="https://i.pinimg.com/736x/4c/15/e8/4c15e80abdad76a1aa0e30fa8a89383e.jpg"
-                  alt="Foto Author"
-                  width="70"
-                  style="border-radius:50%"
-                /><br />
-                <b>✍️ Author:</b> Anny Klaudya | 📅 1 September 2025
-              </center>
-
-              <hr size="3" color="lightblue" />
-
-              <h3>🏷️ Label:</h3>
-              <ul>
-                <li>💡 <a href="#">Motivasi</a></li>
-                <li>📖 <a href="#">Belajar</a></li>
-                <li>💻 <a href="#">Teknologi</a></li>
-              </ul>
-
-              <h3>📜 Deskripsi:</h3>
-              <p>
-                Belajar pemrograman membutuhkan konsistensi dan strategi. Jangan
-                hanya membaca teori, tapi juga sering praktik langsung.
-              </p>
-
-              <p>
-                Beberapa tips: buat jadwal belajar, mulai dari proyek kecil,
-                gunakan dokumentasi resmi, dan jangan takut untuk gagal. Gagal
-                adalah bagian dari proses.
-              </p>
-
-              <p>
-                Ingat, kunci produktif adalah <b>fokus, latihan rutin</b>, dan
-                <b>komunitas</b>. Dengan itu, belajar jadi lebih menyenangkan
-                🚀.
-              </p>
-
-              <!-- Form Komentar -->
-              <h3>💬 Tinggalkan Komentar:</h3>
-              <form>
-                Nama: <input type="text" name="nama" /><br /><br />
-                Komentar:<br />
-                <textarea rows="4" cols="50"></textarea><br /><br />
-                <input type="submit" value="Kirim" />
-              </form>
-
-              <!-- Daftar Komentar -->
-              <h3>🗨️ Daftar Komentar:</h3>
-              <ul>
-                <li>
-                  <table>
-                    <tr>
-                      <td>
-                        <img
-                          src="https://randomuser.me/api/portraits/men/44.jpg"
-                          alt="Foto"
-                          width="50"
-                          style="border-radius:50%"
-                        />
-                      </td>
-                      <td valign="middle">
-                        <b>Andi:</b> Tipsnya keren, bakal aku coba terapin!
-                      </td>
-                    </tr>
-                  </table>
-                </li>
-                <li>
-                  <table>
-                    <tr>
-                      <td>
-                        <img
-                          src="https://randomuser.me/api/portraits/women/45.jpg"
-                          alt="Foto"
-                          width="50"
-                          style="border-radius:50%"
-                        />
-                      </td>
-                      <td valign="middle">
-                        <b>Lina:</b> Setuju, konsistensi memang kunci sukses 👏
-                      </td>
-                    </tr>
-                  </table>
-                </li>
-              </ul>
-
-              <center>
-                <a href="index.html">⬅ Kembali ke Blog</a>
-              </center>
-            </td>
-          </tr>
-        </table>
+        <a href="index.html" class="back-btn">⬅ Kembali ke Blog</a>
       </center>
     </div>
 
-    <br /><br />
-    <center>
-      <font color="gray">© 2025 Dunia Coding & Kreativitas</font>
-    </center>
+    <!-- Footer -->
+    <footer>
+      <p>
+        © 2025 Dunia Coding & Kreativitas | Dibuat dengan ❤️ dan semangat
+        belajar
+      </p>
+    </footer>
   </body>
 </html>
